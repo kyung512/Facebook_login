@@ -7,20 +7,21 @@
     window.fbAsyncInit = function() {
             <!-- Initialize the SDK with your app and the Graph API version for your app -->
             FB.init({
-                      appId            : '2328084540729318',
+                      appId            : '451769217328579',
                       xfbml            : true,
                       version          : 'v19.0'
                     });
  
-            FB.login(function(response) {
-                      if (response.authResponse) {
-                           console.log('Welcome!  Fetching your information.... ');
-                           FB.api('/me', {fields: 'name, email'}, function(response) {
-                               document.getElementById("profile").innerHTML = "Good to see you, " + response.name + ". i see your email address is " + response.email
-                           });
-                      } else { 
-                           console.log('User cancelled login or did not fully authorize.'); }
-            });
+            // FB.login(function(response) {
+            //           if (response.authResponse) {
+            //                console.log('Welcome!  Fetching your information.... ');
+            //                FB.api('/me', {fields: 'name, email'}, function(response) {
+            //                    document.getElementById("profile").innerHTML = "Good to see you, " + response.name + ". i see your email address is " + response.email
+            //                });
+            //           } else { 
+            //                console.log('User cancelled login or did not fully authorize.'); }
+            // });
+
             var callback = function(response) {
               console.log(response);
             }
